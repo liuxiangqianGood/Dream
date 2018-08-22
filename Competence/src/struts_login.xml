@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>	
+	<package name="default"   extends="struts-default">
+		<action name="login_*" class="loginAction" method="{1}">
+		<result name="success">/main.jsp</result>
+		<!-- showall.jsp -->
+		<result name="onclickshowUser">/showT_User.jsp</result>
+		<result name="ok">/success.jsp</result>
+			<result name="updateid">/updateuserid.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="regist">/regist.jsp</result>
+			<result name="showlogin">/loginTest.jsp</result>
+			
+		
+		</action>
+	</package>
+</struts>

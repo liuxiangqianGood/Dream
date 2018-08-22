@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>	
+	<package name="menu"   extends="struts-default">
+		<action name="menu_*" class="menuAction" method="{1}">
+		<result name="success">/success.jsp</result>
+		<result name="onclickshowT_Menu">/showT_Menu.jsp</result>
+		<result name="showmeat">/showmeat.jsp</result>
+		<result name="showvege">/showvege.jsp</result>
+		<result name="showsoup">/showsoup.jsp</result>
+		<result name="showCart">/showCart.jsp</result>
+			<result name="error">/error.jsp</result>
+		
+		</action>
+	</package>
+</struts>

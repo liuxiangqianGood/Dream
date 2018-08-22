@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="map">
+
+    <!-- 表名 -->
+    <sql id="tablename">
+    "Users"
+    </sql>
+    <!-- 字段 -->
+    <sql id="Fieid">
+    "uid",
+    "username",
+    "password"
+    
+    </sql>
+    <!-- 字段值 -->
+    <sql id="FieidValue">
+    #{uid},
+    #{username},
+    #{password}
+   
+    </sql>
+    <!-- 查询用户名登录 -->
+    <select id="findlogin" parameterType="Map" resultType="com.lxq.Entity.User">
+    select * from users u where u.username=#{username} and u.password=#{password}
+    </select>
+    <!-- 查询user表信息显示 -->
+   <select id="finduser" parameterType="Map" resultType="com.lxq.Entity.User">
+   select * from users
+   </select>
+   <!-- 删除一条id信息 -->
+   <delete id="deleteid" parameterType="Map">
+   delete from  users where uid=#{uid}
+   </delete>
+   <!-- 通过id查询这个id的数据 -->
+   <select id="findid" parameterType="Map" resultType="com.lxq.Entity.User">
+   select * from users where uid=#{uid}
+   </select>
+   <!-- 修改一个id的信息 -->
+   <update id="updateid" parameterType="Map">
+   update users set username=#{username},password=#{password} where uid=#{uid}
+   </update>
+   
+   <!-- 注册一个用户 -->
+   <insert id="adduser" parameterType="Map">
+   insert into users (username,password) values (#{username},#{password})
+   </insert>
+    </mapper>
+    
+   

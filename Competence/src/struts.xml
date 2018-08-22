@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>	
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.multipart.maxSize" value="209715200"/>
+	<!-- 登录 -->
+	<include file="struts_login.xml"></include>
+	<include file="struts_role.xml"></include>
+	<include file="struts_user_role.xml"></include>
+	<include file="struts_menu.xml"></include>
+	<include file="struts_cart..xml"></include>
+	<include file="struts_meat.xml"></include>
+</struts>
